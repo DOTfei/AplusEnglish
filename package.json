@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r http://apluscenter.com.my"
+    "deploy": "gh-pages -d dist --cname apluscenter.com.my"
   },
   "dependencies": {
     "react": "^19.2.0",
