@@ -1,0 +1,135 @@
+.about-section {
+    background-color: #f4f6f8;
+}
+
+.about-block {
+    margin-bottom: 4rem;
+}
+
+.bilingual-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.bilingual-content h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.bilingual-content p {
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.about-list,
+.check-list {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.about-list li,
+.check-list li {
+    margin-bottom: 0.5rem;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.reason-card {
+    background-color: var(--color-bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+}
+
+.reason-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(239, 118, 12, 0.1);
+    /* Transparent orange */
+    line-height: 1;
+}
+
+.reason-content h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.reason-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.reason-content hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .bilingual-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Video Section */
+.video-block {
+    text-align: center;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+}
+
+.about-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.media-label {
+    color: var(--color-primary);
+    /* Or use a specific color from your palette */
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.collage-wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.student-collage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+}

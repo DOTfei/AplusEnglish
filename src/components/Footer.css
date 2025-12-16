@@ -1,0 +1,119 @@
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 60px 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-logo-text {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent);
+}
+
+.footer h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+
+
+.footer ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer a {
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--color-white);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    color: var(--color-white);
+    overflow: hidden;
+    /* Ensure image doesn't overflow */
+}
+
+.social-icon:hover {
+    background-color: var(--color-accent);
+}
+
+/* Style for the image icons inside the social buttons */
+.social-icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: invert(1);
+    /* Invert colors to make black logo white */
+}
+
+.footer-payment {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.payment-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.payment-box h4 {
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.payment-placeholder {
+    background-color: var(--color-white);
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #888;
+}
