@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -r https://github.com/DOTfei/AplusEnglish.git"
+    "deploy": "gh-pages -d dist -r http://apluscenter.com.my"
   },
   "dependencies": {
     "react": "^19.2.0",
