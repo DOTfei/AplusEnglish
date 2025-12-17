@@ -19,14 +19,14 @@ const About = () => {
                             <p>Unlike centres that teach many subjects, we specialise deeply in one area — ensuring quality, consistency, and real results.</p>
                             <p>We offer a complete English progression from young learners to advanced secondary levels, including:</p>
                             <ul className="about-list">
-                                <li>📘 Cambridge YLE (Starters / Movers / Flyers)</li>
-                                <li>📗 A2 Key (KET)</li>
-                                <li>📙 B1 Preliminary (PET)</li>
-                                <li>📕 B2 First (FCE)</li>
-                                <li>📔 CAE (C1 Advanced)</li>
-                                <li>📚 CPE (C2 Proficiency)</li>
-                                <li>🎓 MUET</li>
-                                <li>🗣️ Speaking Class</li>
+                                <li>-Cambridge YLE (Starters / Movers / Flyers)</li>
+                                <li>-A2 Key (KET)</li>
+                                <li>-B1 Preliminary (PET)</li>
+                                <li>-B2 First (FCE)</li>
+                                <li>-CAE (C1 Advanced)</li>
+                                <li>-CPE (C2 Proficiency)</li>
+                                <li>-MUET</li>
+                                <li>-Speaking Class</li>
                             </ul>
                             <p>Since moving online in 2020, we have refined our teaching approach to deliver highly engaging, effective, and structured online lessons trusted by students and parents across Malaysia.</p>
                         </div>
@@ -37,14 +37,14 @@ const About = () => {
                             <p>不同于同时教授多门科目的补习中心，我们深耕一个领域，确保教学品质稳定、效果显著、家长放心。</p>
                             <p>我们提供从小学到中学的完整衔接课程，包括：</p>
                             <ul className="about-list">
-                                <li>📘 Cambridge YLE（Starters / Movers / Flyers）</li>
-                                <li>📗 A2 Key（KET）</li>
-                                <li>📙 B1 Preliminary（PET）</li>
-                                <li>📕 B2 First（FCE）</li>
-                                <li>📔 CAE（C1 Advanced）</li>
-                                <li>📚 CPE（C2 Proficiency）</li>
-                                <li>🎓 MUET 大学英文</li>
-                                <li>🗣️ Speaking Class（口语班）</li>
+                                <li>-Cambridge YLE（Starters / Movers / Flyers）</li>
+                                <li>-A2 Key（KET）</li>
+                                <li>-B1 Preliminary（PET）</li>
+                                <li>-B2 First（FCE）</li>
+                                <li>-CAE（C1 Advanced）</li>
+                                <li>-CPE（C2 Proficiency）</li>
+                                <li>-MUET 大学英文</li>
+                                <li>-Speaking Class（口语班）</li>
                             </ul>
                             <p>自 2020 年起转型线上教学，我们不断优化教学方式，让课程更具互动性、系统性与成效，深受全马学生与家长信赖。</p>
                         </div>
@@ -174,8 +174,8 @@ const About = () => {
                     </div>
                 </div>
 
-            </div>
-        </section>
+            </div >
+        </section >
     );
 };
 
