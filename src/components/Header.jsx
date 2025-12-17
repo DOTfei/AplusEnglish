@@ -1,9 +1,28 @@
 import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (e, targetId) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    if (location.pathname === '/') {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else if (targetId === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    } else {
+      navigate('/', { state: { targetId } });
+    }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,11 +43,11 @@ const Header = () => {
 
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
-            <li><a href="/#home" onClick={() => setIsMenuOpen(false)}>Home | 首页</a></li>
-            <li><a href="/#about" onClick={() => setIsMenuOpen(false)}>About Us | 关于我们</a></li>
-            <li><a href="/#programmes" onClick={() => setIsMenuOpen(false)}>Programmes | 课程</a></li>
-            <li><a href="/#classes" onClick={() => setIsMenuOpen(false)}>Classes | 配套</a></li>
-            <li><a href="/#contact" onClick={() => setIsMenuOpen(false)}>Contact | 联系</a></li>
+            <li><a href="#home" onClick={(e) => handleNavigation(e, 'home')}>Home | 首页</a></li>
+            <li><a href="#about" onClick={(e) => handleNavigation(e, 'about')}>About Us | 关于我们</a></li>
+            <li><a href="#programmes" onClick={(e) => handleNavigation(e, 'programmes')}>Programmes | 课程</a></li>
+            <li><a href="#classes" onClick={(e) => handleNavigation(e, 'classes')}>Classes | 配套</a></li>
+            <li><a href="#contact" onClick={(e) => handleNavigation(e, 'contact')}>Contact | 联系</a></li>
           </ul>
         </nav>
       </div>
