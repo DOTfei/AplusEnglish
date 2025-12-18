@@ -7,18 +7,12 @@ const Hero = () => {
             <div className="container hero-container">
                 <div className="hero-content">
                     <h1 className="hero-headline">
-                        Learn English the Fun Way! <br />
-                        <span className="cn-text">快乐趣学英语！</span>
+                        Master English with Confidence & Fun.
                     </h1>
                     <p className="hero-subheadline">
-                        Programmes for Primary and High School Students. <br />
-                        <span className="cn-text">专为中小学生量身打造的英语课程。</span>
+                        Trusted by 2,000+ students since 2020. Expert Cambridge & MUET coaching for primary and secondary students.
                     </p>
-                    <p className="hero-social-proof">
-                        Trusted by 2,000+ Learners Since 2020. <br />
-                        <span className="cn-text">自 2020 年起深受 2,000+ 名学生信赖。</span>
-                    </p>
-
+                    {/* Social proof or additional context if needed */}
                 </div>
                 <div className="hero-cta-group">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaGcplKHxYEXqINu1teICF6C69kC0LGCQpUFGiLBwQXHlIPA/viewform?usp=dialog" className="btn btn-primary hero-cta" target="_blank" rel="noopener noreferrer">
@@ -31,7 +25,6 @@ const Hero = () => {
                         Book Now (Speaking Class)
                     </a>
                 </div>
-                {/* Optional: Add a hero image here if available, or use a background image */}
             </div>
         </section>
     );

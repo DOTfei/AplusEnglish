@@ -35,7 +35,7 @@ const Header = () => {
           <img src={logo} alt="A+ English Logo" />
         </div>
 
-        <button className="mobile-menu-btn" onClick={toggleMenu}>
+        <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -43,13 +43,20 @@ const Header = () => {
 
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
-            <li><a href="#home" onClick={(e) => handleNavigation(e, 'home')}>Home | 首页</a></li>
-            <li><a href="#about" onClick={(e) => handleNavigation(e, 'about')}>About Us | 关于我们</a></li>
-            <li><a href="#programmes" onClick={(e) => handleNavigation(e, 'programmes')}>Programmes | 课程</a></li>
-            <li><a href="#classes" onClick={(e) => handleNavigation(e, 'classes')}>Classes | 配套</a></li>
-            <li><a href="#contact" onClick={(e) => handleNavigation(e, 'contact')}>Contact | 联系</a></li>
+            <li><a href="#home" onClick={(e) => handleNavigation(e, 'home')}>Home</a></li>
+            <li><a href="#about" onClick={(e) => handleNavigation(e, 'about')}>About Us</a></li>
+            <li><a href="#programmes" onClick={(e) => handleNavigation(e, 'programmes')}>Programmes</a></li>
+            <li><a href="#testimonials" onClick={(e) => handleNavigation(e, 'testimonials')}>Success Stories</a></li>
+            <li><a href="#contact" onClick={(e) => handleNavigation(e, 'contact')}>Contact</a></li>
           </ul>
+          {/* Mobile only CTA inside menu if needed, or kept separate. 
+              For desktop it is requested on the far right. 
+              I will assume the 'nav' covers the center links, and I'll add the button outside nav for desktop, 
+              but for mobile it might be better inside. 
+              Let's keep it outside for desktop structure and handle mobile via CSS. 
+          */}
         </nav>
+        {/* Removed CTA as per request */}
       </div>
     </header>
   );

@@ -85,7 +85,35 @@
 
 @media (max-width: 768px) {
     .bilingual-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .bilingual-content .en {
+        order: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .bilingual-content .cn {
+        order: 2;
+        padding-top: 1rem;
+        border-top: 1px dashed #eee;
+    }
+
+    .bilingual-content p,
+    .bilingual-content li {
+        font-size: 1rem;
+        line-height: 1.6;
+        word-break: break-word;
+        word-wrap: break-word;
+    }
+
+    .bilingual-content h3,
+    .bilingual-content h4 {
+        margin-top: 0;
     }
 }
 

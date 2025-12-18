@@ -1,10 +1,13 @@
 .header {
-    background-color: var(--color-white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
+    transition: all 0.3s ease;
 }
 
 .header-container {
@@ -14,26 +17,43 @@
 }
 
 .logo img {
-    height: 75px;
-    /* Adjust based on logo aspect ratio */
+    height: 60px;
     width: auto;
+}
+
+/* Navigation - Center */
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-list {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-list a {
-    font-weight: 600;
+    font-weight: 500;
     color: var(--color-primary);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s;
+    font-size: 1rem;
+    position: relative;
 }
 
 .nav-list a:hover {
     color: var(--color-accent);
+    transform: translateY(-1px);
 }
 
+/* CTA Buttons */
+/* CTA Buttons removed */
+
+/* Mobile Menu Button */
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -41,40 +61,77 @@
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
+    z-index: 1001;
+    /* Above mobile menu overlay */
 }
 
 .bar {
     width: 25px;
     height: 3px;
     background-color: var(--color-primary);
-    border-radius: 2px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 992px) {
+    .header-cta-desktop {
+        display: none;
+        /* Hide desktop button on smaller screens, move to menu */
+    }
+
     .mobile-menu-btn {
         display: flex;
     }
 
     .nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        position: fixed;
+        /* Fixed to cover screen */
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
         background-color: var(--color-white);
-        padding: 1rem 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        z-index: 999;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 6rem 2rem 2rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        /* Slide in from right */
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        align-items: flex-start;
+        /* Left align items in drawer */
     }
 
     .nav.active {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .nav-list {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 1.5rem;
+        width: 100%;
+    }
+
+    .nav-list a {
+        font-size: 1.1rem;
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .header-cta-mobile-only {
+        display: block;
+        width: 100%;
+    }
+
+    .header-cta-mobile-only .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 }
