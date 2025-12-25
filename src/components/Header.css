@@ -6,7 +6,7 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 0.8rem 0;
+    padding: 0.3rem 0;
     transition: all 0.3s ease;
 }
 
@@ -16,21 +16,71 @@
     align-items: center;
 }
 
-.logo img {
-    height: 60px;
-    width: auto;
+.header-left {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-/* Navigation - Center */
-.nav {
+.header-logo {
+    height: 75px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+.header-center {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.header-right {
+    flex: 2;
+    /* Give more space to nav links */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.home-btn {
+    font-weight: 600;
+    color: var(--color-white) !important;
+    background-color: var(--color-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.home-btn:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-home-btn {
+    display: none;
+    /* Hide mobile-specific button on desktop */
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav-list {
     display: flex;
-    gap: 2.5rem;
+    gap: 1.2rem;
+    /* Reduced gap to prevent overlap */
     align-items: center;
     list-style: none;
     margin: 0;
@@ -41,17 +91,15 @@
     font-weight: 500;
     color: var(--color-primary);
     transition: color 0.3s ease, transform 0.2s;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    /* Slightly smaller for desktop fit */
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-list a:hover {
     color: var(--color-accent);
-    transform: translateY(-1px);
 }
-
-/* CTA Buttons */
-/* CTA Buttons removed */
 
 /* Mobile Menu Button */
 .mobile-menu-btn {
@@ -62,7 +110,6 @@
     flex-direction: column;
     gap: 5px;
     z-index: 1001;
-    /* Above mobile menu overlay */
 }
 
 .bar {
@@ -74,10 +121,32 @@
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+    .nav-list {
+        gap: 0.8rem;
+    }
+
+    .nav-list a {
+        font-size: 0.85rem;
+    }
+}
+
 @media (max-width: 992px) {
-    .header-cta-desktop {
+    .header-center {
         display: none;
-        /* Hide desktop button on smaller screens, move to menu */
+        /* Hide center home on mobile */
+    }
+
+    .header-right {
+        flex: 1;
+        gap: 0.8rem;
+    }
+
+    /* Show home button inside right section on mobile */
+    .mobile-home-btn {
+        display: block;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
 
     .mobile-menu-btn {
@@ -86,7 +155,6 @@
 
     .nav {
         position: fixed;
-        /* Fixed to cover screen */
         top: 0;
         right: 0;
         height: 100vh;
@@ -98,11 +166,9 @@
         padding: 6rem 2rem 2rem;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         transform: translateX(100%);
-        /* Slide in from right */
         transition: transform 0.3s ease-in-out;
         z-index: 1000;
         align-items: flex-start;
-        /* Left align items in drawer */
     }
 
     .nav.active {
@@ -122,16 +188,5 @@
         width: 100%;
         padding: 0.5rem 0;
         border-bottom: 1px solid #f0f0f0;
-    }
-
-    .header-cta-mobile-only {
-        display: block;
-        width: 100%;
-    }
-
-    .header-cta-mobile-only .btn {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
     }
 }

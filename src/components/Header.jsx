@@ -1,65 +1,56 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
   const location = useLocation();
-
-  const handleNavigation = (e, targetId) => {
-    e.preventDefault();
-    setIsMenuOpen(false);
-
-    if (location.pathname === '/') {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      } else if (targetId === 'home') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    } else {
-      navigate('/', { state: { targetId } });
-    }
-  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  }
+
   return (
     <header className="header">
       <div className="container header-container">
-        <div className="logo">
-          <img src={logo} alt="A+ English Logo" />
+        <div className="header-left">
+          <Link to="/" onClick={closeMenu}>
+            <img src={logo} alt="A+ English Logo" className="header-logo" />
+          </Link>
         </div>
 
-        <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </button>
+        <div className="header-center">
+          <Link to="/" onClick={closeMenu} className="home-btn center-home-btn">Home</Link>
+        </div>
 
-        <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
-          <ul className="nav-list">
-            <li><a href="#home" onClick={(e) => handleNavigation(e, 'home')}>Home</a></li>
-            <li><a href="#about" onClick={(e) => handleNavigation(e, 'about')}>About Us</a></li>
-            <li><a href="#programmes" onClick={(e) => handleNavigation(e, 'programmes')}>Programmes</a></li>
-            <li><a href="#testimonials" onClick={(e) => handleNavigation(e, 'testimonials')}>Success Stories</a></li>
-            <li><a href="#contact" onClick={(e) => handleNavigation(e, 'contact')}>Contact</a></li>
-          </ul>
-          {/* Mobile only CTA inside menu if needed, or kept separate. 
-              For desktop it is requested on the far right. 
-              I will assume the 'nav' covers the center links, and I'll add the button outside nav for desktop, 
-              but for mobile it might be better inside. 
-              Let's keep it outside for desktop structure and handle mobile via CSS. 
-          */}
-        </nav>
-        {/* Removed CTA as per request */}
+        <div className="header-right">
+          <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
+            <ul className="nav-list">
+              <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
+              <li><Link to="/secondary-intensive" onClick={closeMenu}>Secondary Power-Up Class</Link></li>
+              <li><Link to="/cambridge" onClick={closeMenu}>Cambridge English</Link></li>
+              <li><Link to="/muet" onClick={closeMenu}>MUET</Link></li>
+              <li><Link to="/speaking" onClick={closeMenu}>Speaking Class</Link></li>
+              <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+            </ul>
+          </nav>
+
+          <Link to="/" onClick={closeMenu} className="home-btn mobile-home-btn">Home</Link>
+          <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+        </div>
       </div>
     </header>
   );
 };
 
 export default Header;
+

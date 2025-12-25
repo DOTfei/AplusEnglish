@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from './Hero';
-import About from './About';
-import Programmes from './Programmes';
-import Classes from './Classes';
+import ProgrammesSummary from './ProgrammesSummary';
+
 import Testimonials from './Testimonials';
-import Contact from './Contact';
 import SectionDivider from './SectionDivider';
 
 const Home = () => {
@@ -24,15 +22,9 @@ const Home = () => {
         <main>
             <Hero />
             <SectionDivider />
-            <About />
-            <SectionDivider />
-            <Programmes />
-            <SectionDivider />
-            <Classes />
+            <ProgrammesSummary />
             <SectionDivider />
             <Testimonials />
-            <SectionDivider />
-            <Contact />
         </main>
     );
 };
