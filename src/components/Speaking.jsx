@@ -44,7 +44,7 @@ const Speaking = () => {
                         </div>
 
                         <div className="cta-center" style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM3I8R7U66GPOKsLFc2aBy1j38V5Hh9Bc5fR9gzDvctPmN-w/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Now (Speaking Class)</a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdM3I8R7U66GPOKsLFc2aBy1j38V5Hh9Bc5fR9gzDvctPmN-w/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Secure Your Spot | 立即报名</a>
                         </div>
                     </div>
                 </div>

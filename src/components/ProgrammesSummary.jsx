@@ -10,11 +10,11 @@ const ProgrammesSummary = () => {
 
 
                 <div className="levels-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-                    {/* Secondary English Power-Up Class Card */}
+                    {/* Secondary English Intensive Class Card */}
                     <div className="level-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                        <h3 className="prog-heading" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Secondary English Power-Up Class | 中学英语强化班</h3>
-                        <p>Build a solid foundation for SPM English and beyond! Bridge the gap between basic English and academic writing.</p>
-                        <p className="sm-cn" style={{ marginTop: '0.5rem' }}>打好 SPM 英文基础，稳拿高分！助你从“普通英语”跨越到“高水平学术英语”。</p>
+                        <h3 className="prog-heading" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Secondary English Intensive Class | 中学英语提分强化班</h3>
+                        <p>Focus on scores, not socializing. Zero-pressure learning designed for students who value efficiency and results.</p>
+                        <p className="sm-cn" style={{ marginTop: '0.5rem' }}>专注分数，拒绝社交压力。为追求高效与成绩的学生量身打造的零压力学习环境。</p>
                         <div style={{ marginTop: 'auto', paddingTop: '1.5rem' }}>
                             <Link to="/secondary-intensive" className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }}>View more</Link>
                         </div>
@@ -23,6 +23,7 @@ const ProgrammesSummary = () => {
                     {/* Cambridge Card */}
                     <div className="level-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                         <h3 className="prog-heading" style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Cambridge English | 剑桥英语</h3>
+                        <p className="sm-cn" style={{ marginBottom: '1rem' }}>剑桥国际英语标准 (Cambridge Framework) 严格对接 CEFR 国际语言标准，确保每一步学习都有据可依，有证可循。</p>
                         <p>
                             <strong>小学：</strong>英语启蒙与基础 (YLE)<br />
                             <strong>中学：</strong>对接国际大考 (IGCSE 衔接)<br />

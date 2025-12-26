@@ -32,7 +32,7 @@ const Header = () => {
           <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
             <ul className="nav-list">
               <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
-              <li><Link to="/secondary-intensive" onClick={closeMenu}>Secondary Power-Up Class</Link></li>
+              <li><Link to="/secondary-intensive" onClick={closeMenu}>Secondary Intensive Class</Link></li>
               <li><Link to="/cambridge" onClick={closeMenu}>Cambridge English</Link></li>
               <li><Link to="/muet" onClick={closeMenu}>MUET</Link></li>
               <li><Link to="/speaking" onClick={closeMenu}>Speaking Class</Link></li>

@@ -11,7 +11,7 @@ const Hero = () => {
                         Master English with Confidence & Fun.
                     </h1>
                     <p className="hero-subheadline">
-                        Trusted by 2,000+ students since 2020. Expert Cambridge & MUET coaching for primary and secondary students.
+                        Trusted by 2,000+ students since 2018. Expert Cambridge & MUET coaching for primary and secondary students.
                     </p>
                     {/* Social proof or additional context if needed */}
                 </div>

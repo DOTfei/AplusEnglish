@@ -120,7 +120,7 @@ const WhatIsMuet = () => {
 
                     <div className="cta-center" style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5rem', gap: '1rem' }}>
                         <Link to="/muet" className="btn btn-secondary">Back to Program</Link>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfR387buFFREjO0ueyNFqfpVL_NSkwKw29B61eJd1T6FPjKgw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Now (MUET)</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfR387buFFREjO0ueyNFqfpVL_NSkwKw29B61eJd1T6FPjKgw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Secure Your Spot | 立即报名</a>
                     </div>
                 </div>
             </section>
