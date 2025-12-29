@@ -29,7 +29,7 @@ const Testimonials = () => {
     return (
         <section id="testimonials" className="testimonials-section">
             <div className="container">
-                <h2 className="section-title">What Parents Say | 家长的好评</h2>
+                <h2 className="section-title">Review | 好评</h2>
                 <div className="testimonials-grid">
                     {testimonials.map((item) => (
                         <div key={item.id} className="testimonial-card">

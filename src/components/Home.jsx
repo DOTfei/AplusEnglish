@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from './Hero';
 import ProgrammesSummary from './ProgrammesSummary';
-
-import Testimonials from './Testimonials';
+import Contact from './Contact';
 import SectionDivider from './SectionDivider';
 
 const Home = () => {
@@ -24,7 +23,7 @@ const Home = () => {
             <SectionDivider />
             <ProgrammesSummary />
             <SectionDivider />
-            <Testimonials />
+            <Contact />
         </main>
     );
 };

@@ -14,6 +14,7 @@ import ScrollToTop from './components/ScrollToTop';
 import WhatIsCambridge from './components/WhatIsCambridge';
 import WhatIsMuet from './components/WhatIsMuet';
 import SecondaryIntensive from './components/SecondaryIntensive';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Route path="/cambridge" element={<Cambridge />} />
           <Route path="/muet" element={<Muet />} />
           <Route path="/speaking" element={<Speaking />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/review" element={<Testimonials />} />
           <Route path="/what-is-cambridge" element={<WhatIsCambridge />} />
           <Route path="/what-is-muet" element={<WhatIsMuet />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

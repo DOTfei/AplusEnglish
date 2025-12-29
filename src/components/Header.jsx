@@ -36,7 +36,7 @@ const Header = () => {
               <li><Link to="/cambridge" onClick={closeMenu}>Cambridge English</Link></li>
               <li><Link to="/muet" onClick={closeMenu}>MUET</Link></li>
               <li><Link to="/speaking" onClick={closeMenu}>Speaking Class</Link></li>
-              <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+              <li><Link to="/review" onClick={closeMenu}>Review</Link></li>
             </ul>
           </nav>
 
