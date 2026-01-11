@@ -1,13 +1,49 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Programmes.css';
 
+import scheduleImage1 from '../assets/cambridge-schedule-1.png';
+import scheduleImage2 from '../assets/cambridge-schedule-2.png';
+
 const Cambridge = () => {
+    const carouselRef = useRef(null);
+
+    const scrollPrev = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+        }
+    };
+
+    const scrollNext = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="programmes-page">
             <section className="programmes-section">
                 <div className="container">
                     <h2 className="section-title">Cambridge English Program | 剑桥英语课程</h2>
+
+                    {/* Schedule Carousel */}
+                    <div className="schedule-carousel-container" style={{ position: 'relative' }}>
+                        <button className="carousel-arrow left" onClick={scrollPrev} aria-label="Previous slide">
+                            &#10094;
+                        </button>
+                        <div className="schedule-carousel" ref={carouselRef}>
+                            <div className="schedule-slide">
+                                <img src={scheduleImage1} alt="Cambridge Schedule 1" />
+                            </div>
+                            <div className="schedule-slide">
+                                <img src={scheduleImage2} alt="Cambridge Schedule 2" />
+                            </div>
+                        </div>
+                        <button className="carousel-arrow right" onClick={scrollNext} aria-label="Next slide">
+                            &#10095;
+                        </button>
+                        <p className="swipe-hint">Swipe left to see more &larr; &rarr;</p>
+                    </div>
 
                     <div className="cta-center" style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaGcplKHxYEXqINu1teICF6C69kC0LGCQpUFGiLBwQXHlIPA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="btn" style={{ padding: '0.8rem 2rem', backgroundColor: 'var(--color-accent)', color: '#fff' }}>Secure Your Spot | 立即报名</a>

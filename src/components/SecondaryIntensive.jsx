@@ -1,12 +1,21 @@
 import React from 'react';
 import './Programmes.css';
 
+import scheduleImage from '../assets/secondary-intensive-schedule.png';
+
 const SecondaryIntensive = () => {
     return (
         <div className="programmes-page">
             <section className="programmes-section">
                 <div className="container">
                     <h2 className="section-title">Secondary English Intensive Class | 中学英语提分强化班</h2>
+                    <div className="schedule-image-container" style={{ textAlign: 'center', margin: '2rem 0' }}>
+                        <img
+                            src={scheduleImage}
+                            alt="Secondary English Intensive Class Schedule"
+                            style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}
+                        />
+                    </div>
 
                     {/* Blue Themed Intensive Block */}
                     <div className="prog-block intensive-block" style={{ marginTop: '2rem', backgroundColor: 'var(--color-primary)', color: '#fff', border: 'none' }}>
